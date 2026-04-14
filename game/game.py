@@ -24,4 +24,15 @@ class Game():
         self._turn=self.human
         self.deck=deck
     
+    @property
+    def turn(self):
+        return self._turn
     
+    @turn.setter
+    def turn(self,player):
+
+        if isinstance(player,Player):
+            self._turn=player
+        
+        else:
+            raise ValueError("The turn must be assined to a player object")
