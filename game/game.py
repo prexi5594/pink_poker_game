@@ -12,3 +12,16 @@ class Game():
         human_cards= [deck.give_card(),deck.give_card()]
         pc_card=[deck.give_card(),deck.give_card()]
         
+        
+        self.human=Player(type="human",
+                          cards=human_cards,
+                          bet=0,
+                          name="John",amount=2000)
+        self.pc=Player(type="pc",
+                          cards=pc_card,
+                          bet=0,
+                          name="Stockfish",amount=2000)
+        self._turn=self.human
+        self.deck=deck
+    
+    
