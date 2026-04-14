@@ -10,6 +10,19 @@ class Player():
         self.cards=cards
         self._bet=bet
         self.amount=amount
+        
+    @property
+    def bet(self):
+
+        return self._bet
+    
+    @bet.setter
+    def bet(self,amount):
+        #Checks -> safe bets
+        #ensure you check amount is a number greater than 0
+        self._bet=self._bet+amount
+        self.amount=self.amount-amount
+
 
 def place_initial_bet(self):
         
@@ -30,4 +43,3 @@ def place_initial_bet(self):
             else:
                 print(f"enter a number as valid amount between 1 and {self.amount}")
 
-   
